@@ -114,12 +114,9 @@ function draw() {
     drawBall();
     drawPaddle();
     drawScore();
-    if(x + dx > canvas.width-ballRadius || x + dx < 0) {
+    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
     }    
-    if(y + dy > canvas.height-ballRadius || y + dy < 0) {
-        dy = -dy;
-    }
     if(y + dy < ballRadius) {
     dy = -dy;
     } else if(y + dy > canvas.height-ballRadius) {
@@ -129,7 +126,6 @@ function draw() {
         else {
             alert("GAME OVER");
             document.location.reload();
-            clearInterval(interval);
         }
     }
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
