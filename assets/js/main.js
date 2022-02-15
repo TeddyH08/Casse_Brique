@@ -63,42 +63,6 @@ function drawPaddle() {
     ctx.fill();
     ctx.closePath();
 }
-
-/* partie 5 */
-
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
-}
-
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
-}
-
-setInterval(draw, 10);
-
-if(y + dy < ballRadius) {
-    dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); 
-}
-
-if(y + dy < ballRadius) {
-    dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    if(x > paddleX && x < paddleX + paddleWidth) {
-        dy = -dy;
-    }
-    else {
-        alert("GAME OVER");
-        document.location.reload();
-        clearInterval(interval);
-    }
-}
-
-/* fin de partie 5 */
-
 /* partie 8 */
 
 
@@ -155,6 +119,18 @@ function draw() {
     }    
     if(y + dy > canvas.height-ballRadius || y + dy < 0) {
         dy = -dy;
+    }
+    if(y + dy < ballRadius) {
+    dy = -dy;
+    } else if(y + dy > canvas.height-ballRadius) {
+        if(x > paddleX && x < paddleX + paddleWidth) {
+            dy = -dy;
+        }
+        else {
+            alert("GAME OVER");
+            document.location.reload();
+            clearInterval(interval);
+        }
     }
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
         paddleX += 7;
