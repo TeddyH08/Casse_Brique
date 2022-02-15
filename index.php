@@ -10,7 +10,7 @@
 </head>
 
 <body>  
-    <canvas id="myCanvas" width="480" height="320"></canvas>
+    <canvas id="myCanvas" width="1000" height="700"></canvas>
 
     <script src="assets/js/main.js"></script>
 </body>

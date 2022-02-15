@@ -18,7 +18,7 @@ function drawBall() {
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
-  }
+}
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
