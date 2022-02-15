@@ -68,7 +68,7 @@ function drawPaddle() {
 
 function drawScore() {
     ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "green";
     ctx.fillText("Score: "+score, 8, 20);
 }
 
