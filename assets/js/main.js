@@ -7,22 +7,28 @@ var y = canvas.height-30;
 var dx = 2;
 var dy = -2;
 
-/* Chapitre 1*/
+var ballRadius = 10;
+
+/* Création de la balle */
 
 function drawBall() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
+    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+    ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
-    x += dx;
-    y += dy;
   }
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
+    if(x + dx > canvas.width-ballRadius || x + dx < 0) {
+        dx = -dx;
+    }    
+    if(y + dy > canvas.height-ballRadius || y + dy < 0) {
+        dy = -dy;
+    }
     x += dx;
     y += dy;
 }
