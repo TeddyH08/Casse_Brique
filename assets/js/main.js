@@ -1,23 +1,7 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-
-ctx.beginPath();
-ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
-ctx.fill();
-ctx.closePath();
-
-ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
-ctx.fillStyle = "green";
-ctx.fill();
-ctx.closePath();
-
-ctx.beginPath();
-ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
-ctx.stroke();
-ctx.closePath();
+var interval = setInterval(draw, 10);
+var score = 0;
 
 
 /* partie 5 */
@@ -31,7 +15,7 @@ if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
 }
 
 setInterval(draw, 10);
-var interval = setInterval(draw, 10);
+
 if(y + dy < ballRadius) {
     dy = -dy;
 } else if(y + dy > canvas.height-ballRadius) {
@@ -55,5 +39,54 @@ if(y + dy < ballRadius) {
 
 /* fin de partie 5 */
 
+/* partie 8 */
 
 
+function drawScore() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Score: "+score, 8, 20);
+}
+
+function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
+            var b = bricks[c][r];
+            if(b.status == 1) {
+                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                    dy = -dy;
+                    b.status = 0;
+                    score++;
+                }
+            }
+        }
+    }
+}
+
+/*  a metre dans la fonction draw 
+
+drawScore();
+
+*/
+
+function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
+            var b = bricks[c][r];
+            if(b.status == 1) {
+                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                    dy = -dy;
+                    b.status = 0;
+                    score++;
+                    if(score == brickRowCount*brickColumnCount) {
+                        alert("C'est gagné, Bravo!");
+                        document.location.reload();
+                        clearInterval(interval);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* fin de partie 8 */ 
