@@ -11,9 +11,6 @@
 
 <body>  
     <canvas id="myCanvas" width="480" height="320"></canvas>
-    <div style='display:none;'>
-        <img id='axel' src='assets/images/teteaxel.png'>
-    </div>
 
     <script src="assets/js/main.js"></script>
 </body>
