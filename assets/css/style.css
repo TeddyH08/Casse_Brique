@@ -3,7 +3,35 @@
     margin: 0;
 }
 
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.niveau {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #DCCA87;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+}
+
 canvas { 
+    background-color: white;
+    border: 2px black solid;
     display: block; 
     margin: 0 auto; 
 }
