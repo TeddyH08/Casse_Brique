@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>  
-    <canvas id="myCanvas" width="1000" height="700"></canvas>
+<body> 
+    <div class="niveau">
+        <a href="index.php">Niveau TLM</a>
+        <a href="index.php">Niveau Quentin</a>
+        <a href="index.php">Niveau Maria</a>
+        <a href="index.php">Niveau Andy</a>
+        <a href="index.php">Niveau Teddy</a>
+    </div>
+
+    <canvas id="myCanvas" width="1000" height="600"></canvas>
 
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
