@@ -1,18 +1,18 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
-var ballRadius = 10;
+var ballRadius = 15;
 
 var x = canvas.width/2;
 var y = canvas.height-30;
 
 var tab = [dx = 0.5, dy = -0.5]
 
-var dx = 2;
-var dy = -2;
+var dx = 0.7;
+var dy = -0.7;
 
-var paddleHeight = 10;
-var paddleWidth = 100;
+var paddleHeight = 20;
+var paddleWidth = 80;
 var paddleX = (canvas.width-paddleWidth)/2;
 
 var rightPressed = false;
@@ -28,6 +28,7 @@ var brickOffsetTop = 40;
 var score = 0;
 var lives = 3;
 
+
 var bricks = [];
 for(var c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
@@ -35,6 +36,18 @@ for(var c=0; c<brickColumnCount; c++) {
         bricks[c][r] = { x: 0, y: 0, status: 1 };
     }
 }
+
+const brickImg = new Image(brickWidth, brickHeight);
+brickImg.onload = draw;
+brickImg.src = '/Casse_Brique-Dev/assets/images/g1.png';
+
+const ballImg = new Image(ballRadius);
+ballImg.onload = draw;
+ballImg.src = '/Casse_Brique-Dev/assets/images/S1.png';
+
+const paddleImg = new Image(paddleWidth, paddleHeight);
+paddleImg.onload = draw;
+paddleImg.src = '/Casse_Brique-Dev/assets/images/J1.png';
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -86,8 +99,8 @@ function collisionDetection() {
 
 function drawBall() {
     ctx.beginPath();
-    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "black";
+    ctx.arc(x, y, ballRadius, 0, 10);
+    ctx.fillStyle = ctx.createPattern(ballImg, 'repeat');
     ctx.fill();
     ctx.closePath();
 }
@@ -95,7 +108,7 @@ function drawBall() {
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "black";
+    ctx.fillStyle = ctx.createPattern(paddleImg, 'repeat');
     ctx.fill();
     ctx.closePath();
 }
@@ -110,7 +123,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "black";
+                ctx.fillStyle = ctx.createPattern(brickImg, 'repeat');
                 ctx.fill();
                 ctx.closePath();
             }
@@ -139,6 +152,7 @@ function draw() {
     drawScore();
     drawLives();
     collisionDetection();
+    
   
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
@@ -158,8 +172,8 @@ function draw() {
             else {
                 x = canvas.width/2;
                 y = canvas.height-30;
-                dx = 2;
-                dy = -2;
+                dx = 0.7;
+                dy = -0.7;
                 paddleX = (canvas.width-paddleWidth)/2;
             }
         }
