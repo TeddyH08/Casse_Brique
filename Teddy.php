@@ -9,7 +9,14 @@
 </head>
 
 <body>
-    <h1>Petit Memory</h1>
+    <div class="niveau">
+        <a href="index.php">Niveau TLM</a>
+        <a href="index.php">Niveau Quentin</a>
+        <a href="index.php">Niveau Maria</a>
+        <a href="index.php">Niveau Andy</a>
+        <a href="Teddy.php">Niveau Teddy</a>
+    </div>
+
     <div class="row">
         <div data-color="johann" class="card johann color-hidden" onclick="onCardClicked(event)"></div>
         <div data-color="axel" class="card axel color-hidden" onclick="onCardClicked(event)"></div>
