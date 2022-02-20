@@ -38,6 +38,6 @@
         <div data-color="jordan" class="card jordan color-hidden" onclick="onCardClicked(event)"></div>
     </div>
 
-    <script src="Teddy.js"></script>
+    <script src="assets/js/Teddy.js"></script>
 </body>
 </html>
