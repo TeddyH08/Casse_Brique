@@ -66,36 +66,36 @@ canvas {
 }
 
 .axel {
-    background-image: url("axeltete.png");
+    background-image: url("../images/axeltete.png");
     background-size: cover;
 }
 
 .guillaume {
-    background: no-repeat center url("g1.png");
+    background: no-repeat center url("../images/g1.png");
 }
 
 .jjj {
-    background: no-repeat center url("J1.png"); 
+    background: no-repeat center url("../images/J1.png"); 
 }
 
 .romain1 {
-    background: no-repeat center url("r1.png");  
+    background: no-repeat center url("../images/r1.png");  
 }
 
 .romain2 {
-    background: no-repeat center url("r2.png");  
+    background: no-repeat center url("../images/r2.png");  
 }
 
 .steven {
-    background: no-repeat center url("S1.png");
+    background: no-repeat center url("../images/S1.png");
 }
 
 .johann {
-    background: no-repeat center url("johann.PNG");  
+    background: no-repeat center url("../images/johann.PNG");  
 }
 
 .jordan {
-    background: no-repeat center url("Jordan.PNG");   
+    background: no-repeat center url("../images/Jordan.PNG");   
 }
 
 .color-hidden {
