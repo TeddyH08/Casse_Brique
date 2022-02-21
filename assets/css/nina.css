@@ -1,0 +1,34 @@
+body{
+    padding-left:20px;
+    font-family:arial;
+  }
+
+  h1{
+      text-align: center;
+      color: black;
+  }
+p{
+    text-align: center;
+}
+
+  div{
+    width:100px;
+    height:100px;
+    background-color: rgb(223, 30, 30);
+    display:inline-block;
+    margin:7px;
+    position:relative;
+    left:100px;
+  }
+  div:hover{
+    background-color:darkgrey;
+  }
+  .select{
+    background-image: url(r1.png);
+  }
+  .select:hover{
+    background-image: url(r2.png);
+  }
+  .deselect{
+    background-color:lightgrey;
+  }
