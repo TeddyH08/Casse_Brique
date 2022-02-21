@@ -5,7 +5,7 @@
     bottom:20px;
     height:25px;
     width:50px;
-    background-image: url("assets/images/J1.png");
+    background-image: url("../images/Jj1.png");
     background-color: aliceblue;
     background-repeat: no-repeat;
     position:absolute;
@@ -17,7 +17,7 @@
     border-radius:2px;
     height:20px;
     width:50px;
-    background-image: url("assets/images/g1.png");
+    background-image: url("../images/gg1.png");
     background-repeat: no-repeat;
     position:absolute;
     
@@ -28,7 +28,7 @@
     height:20px;
     width:50px;
     position:absolute;
-    background-image: url("assets/images/S1.png");
+    background-image: url("../images/Ss1.png");
     background-repeat: no-repeat;
     border: brown 2px;
 }
@@ -39,7 +39,7 @@ left:100px;
 top:150px;
 height:50px;
 width:50px;
-background-image:url("assets/images/r2.png");
+background-image:url("../images/rr2.png");
 background-color: blue;
 background-repeat: no-repeat;
 position:absolute;
