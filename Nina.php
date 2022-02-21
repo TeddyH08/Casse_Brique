@@ -8,13 +8,11 @@
     <title>test</title>
 </head>
 <body>
-    <div class="niveau">
         <a href="index.php">Niveau TLM</a>
         <a href="index.php">Niveau Quentin</a>
         <a href="Nina.php">Niveau Maria</a>
         <a href="index.php">Niveau Andy</a>
         <a href="Teddy.php">Niveau Teddy</a>
-    </div>
     
     <h1>Le carré</h1>
     <p>but du jeu: mettre les bords du carré avec les images en clickant sur les différentes boites.<br> 
