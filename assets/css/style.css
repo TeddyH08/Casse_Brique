@@ -102,35 +102,3 @@ canvas {
     background-image: none;
     background-color: #eee;
 }
-
-/* Nina */
-
-h1{
-      text-align: center;
-      color: black;
-  }
-p{
-    text-align: center;
-}
-
-  div{
-    width:100px;
-    height:100px;
-    background-color: black;
-    display:inline-block;
-    margin:7px;
-    position:relative;
-    left:100px;
-  }
-  div:hover{
-    background-color:darkgrey;
-  }
-  .select{
-    background-image: url(../images/r1.png);
-  }
-  .select:hover{
-    background-image: url(../images/r2.png);
-  }
-  .deselect{
-    background-color:lightgrey;
-  }
