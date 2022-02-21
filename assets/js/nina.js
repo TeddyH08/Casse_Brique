@@ -1,7 +1,7 @@
 for(let i=0;i<9;i++){
     let box = document.createElement("div");
     box.innerHTML="&nbsp;";
-    box.setAttribute("id",${i+1});
+    box.setAttribute("id",`${i+1}`);
     if(i%3 == 0){
       let br = document.createElement("br");
       document.body.appendChild(br);
