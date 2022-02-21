@@ -126,10 +126,10 @@ p{
     background-color:darkgrey;
   }
   .select{
-    background-image: url(r1.png);
+    background-image: url(../images/r1.png);
   }
   .select:hover{
-    background-image: url(r2.png);
+    background-image: url(../images/r2.png);
   }
   .deselect{
     background-color:lightgrey;
