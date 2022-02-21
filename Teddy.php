@@ -11,9 +11,9 @@
 <body>
     <div class="niveau">
         <a href="index.php">Niveau TLM</a>
-        <a href="index.php">Niveau Quentin</a>
-        <a href="index.php">Niveau Maria</a>
-        <a href="index.php">Niveau Andy</a>
+        <a href="Quentin.php">Niveau Quentin</a>
+        <a href="Nina.php">Niveau Maria</a>
+        <a href="Andy.php">Niveau Andy</a>
         <a href="Teddy.php">Niveau Teddy</a>
     </div>
 
