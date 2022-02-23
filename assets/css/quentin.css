@@ -1,3 +1,33 @@
+* { 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.niveau {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #DCCA87;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+}
 #cucure{
     border-radius:4px 4px 1px 1px;
     border-color: aliceblue;
