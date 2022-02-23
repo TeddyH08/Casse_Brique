@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/css/andy.css">
 </head>
 <body>
+    
+    
     <h1>Tic Tac Toe</h1>
     <section id="jeu">
         <div data-index="0" class="case"></div>
