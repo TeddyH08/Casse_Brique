@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="assets/css/andy.css">
 </head>
 <body>
-    
+    <div class="niveau">
+        <a href="index.php">Niveau TLM</a>
+        <a href="Quentin.php">Niveau Quentin</a>
+        <a href="Nina.php">Niveau Maria</a>
+        <a href="Andy.php">Niveau Andy</a>
+        <a href="Teddy.php">Niveau Teddy</a>
+    </div>
     
     <h1>Tic Tac Toe</h1>
     <section id="jeu">
