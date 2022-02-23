@@ -2,38 +2,6 @@ body{
     text-align: center;
 }
 
-* { 
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    background-color: black;
-    overflow-x: hidden;
-}
-
-.niveau {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    background-color: black;
-}
-
-a {
-    text-decoration: none;
-    color: #DCCA87;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-a:hover {
-    background-color: white;
-    color: black;
-}
-
-
 #jeu{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
